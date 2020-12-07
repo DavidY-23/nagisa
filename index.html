@@ -2,17 +2,20 @@
     <link rel="stylesheet" href="Nagisa.css">
     <link rel="icon" href="https://cdn.discordapp.com/emojis/781262894741979136.png?v=1">
     <title>Nagisa</title>
-    
+
     <body>
         
     <!--This is the play button-->
+    <input class="dango" type="submit" value="Test">
     <button onclick="playVid()" type="button" id="playVid">Play</button>
-
+    
     <div class="videoHolder">
         <video id="video" autoplay muted src="">
         </video>
     </div>
-    <button id='playRandom' type="button" name="button">Push to Play</button>
+    <!--Random button if it ever works..-->
+
+    <button id='playRandom' type="submit" name="button">Push to Play</button>
 
     <!--These are the videos-->
     <video autoplay loop id="myVideo">
@@ -22,19 +25,21 @@
 
 
 
-
-
-    <!--Script to play video-->
+    <!--Script for play video button-->
     <script> 
         var vid = document.getElementById("myVideo"); 
         
         function playVid() { 
-          vid.play(); 
+          if (myVideo.paused)
+          {
+            vid.play(); 
+          }
+          else
+          {
+            vid.pause();
+          }
         } 
-        
-        function pauseVid() { 
-          vid.pause(); 
-        } 
+
     </script> 
 
 
