@@ -7,8 +7,13 @@
   min-height: 100%;
 }
 
-#button
-        {
-            position: relative;
-            z-index: 1;
-        }
+#playRandom{
+      position: relative;
+      z-index: 1;
+  }
+
+#playVid
+{
+    position: relative;
+    z-index: 1;
+}
