@@ -6,15 +6,16 @@
     <body>
         
     <!--This is the play button-->
+    <!--
     <img src="button.jpg" height="50" width="50" button onclick="playVid()" type="button" id="playVid">Play</button>
+    -->
     <!--USEFUL!!-->
     <div class="videoHolder">
         <video autoplay loop id="video">
         </video>
     </div>
-    <!--Random button if it ever works..-->
-
-    <button id='playRandom' type="submit" name="button">Push to Play</button>
+    <!--New play button-->
+    <button id='playRandom' type="submit" name="TestButton" button onclick="playVid()"></button>
 
     <!--These are the videos-->
     <!--
@@ -26,7 +27,7 @@
 
 
     <script>
-      const videos = ["video1.mp4", "video2.mp4"]
+      const videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"]
       const randomNumber = Math.floor(Math.random() * videos.length)
       const currentVideo = videos[randomNumber]
 
