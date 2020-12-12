@@ -5,36 +5,23 @@
 
     <body>
         
-    <!--This is the play button-->
-    <!--
-    <img src="button.jpg" height="50" width="50" button onclick="playVid()" type="button" id="playVid">Play</button>
-    -->
     <!--USEFUL!!-->
     <div class="videoHolder">
         <video autoplay loop id="video">
         </video>
     </div>
+
     <!--New play button-->
-    <button id='playRandom' type="submit" name="TestButton" button onclick="playVid()"></button>
+    <button id='playPause' type="submit" name="TestButton" button onclick="playVid()"></button>
 
-    <!--These are the videos-->
-    <!--
-    <video autoplay loop id="myVideo">
-        <source src="video1.mp4" type='video/mp4'>
-        <source src="video2.mp4" type='video/mp4'>
-    </video>
-    -->
-
-
+    <!--Refreshing it gives a new video-->
     <script>
       const videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"]
       const randomNumber = Math.floor(Math.random() * videos.length)
       const currentVideo = videos[randomNumber]
-
       const videoElement = document.getElementById('video');
       videoElement.src = currentVideo
-      videoElement.setAttribute("width", "100%");
-      videoElement.setAttribute("height", "100%");
+      //Play and pause button
       function playVid() { 
         if (videoElement.paused)
         {
@@ -45,11 +32,6 @@
           videoElement.pause();
         }
       } 
-
     </script> 
-
-
-
-
     </body>
 </html>
