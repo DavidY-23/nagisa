@@ -1,12 +1,11 @@
- .videoHolder {
+.videoHolder {
   position: fixed;
   right: 0;
   bottom: 0;
   height: 100%;
   width: 100%;
-  min-width: calc(100% - height of header);
-  min-height: calc(100% - height of header);
-
+  max-height: 100%;
+  max-width: 100%;
 }
 
 #playRandom{
@@ -22,9 +21,8 @@
     margin-top: 20px;
 }
 
-/* Might be useless */
-/*
-#videoElement
+
+.videoHolder video
 {
   position: fixed;
   right: 0;
@@ -32,7 +30,7 @@
   min-width: 100%;
   min-height: 100%;
 }
-*/
+
 #playPause
 {
   position: fixed;
