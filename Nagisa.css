@@ -1,11 +1,11 @@
- /* Style the video: 100% width and height to cover the entire window */
-
  .videoHolder {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  height: 100%;
+  min-width: calc(100% - height of header);
+  min-height: calc(100% - height of header);
+
 }
 
 #playRandom{
@@ -21,6 +21,8 @@
     margin-top: 20px;
 }
 
+/* Might be useless */
+/*
 #videoElement
 {
   position: fixed;
@@ -28,11 +30,11 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-
 }
-
-#playRandom
+*/
+#playPause
 {
+  position: fixed;
   z-index: 1;
   background-color: transparent;
   background-image:url(button2.png);
@@ -47,9 +49,8 @@
 }
 
 
-#playRandom:hover
+#playPause:hover
 {
   background-color: transparent;
-
   background-image:url(button.jpg);
 }
